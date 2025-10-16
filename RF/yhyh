@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            color:white;
+            background:black;
+            text-align: center;
+        }
+        nav{
+            background-color: rgb(94, 250, 255);
+        }
+        li{
+            align-items: center;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li a{
+            display: block;
+            color: rgb(17, 0, 255);
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>The CVM University</h1>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="">ISTAR</a></li>
+                <li><a href="">SEMCOM</a></li>
+                <li><a href="">NVPAS</a></li>
+            </ul>
+        </nav>
+    </section>
+</body>
+</html>

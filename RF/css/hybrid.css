@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    width: 100%;
+    padding: 1%;
+    overflow: hidden;
+}
+
+.section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    background-color: lightblue;
+    color: red;
+    padding: 15px 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%; /* fluid */
+}
+
+.header img {
+    width: 110px;   /* fixed logo */
+    margin-right: 20px;
+}
+
+.header h4 {
+    font-size:xx-large;
+}
+
+nav {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkblue;
+    color: white;
+    margin: 1%;
+}
+
+
+.menu-icon {
+    display: none;
+    width: 30px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+}
+.nav-list {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline-block;
+    padding: 1% 2%;
+    margin: 0.5%;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+
+li {
+    display: inline-block;
+    padding: 1% 2%;
+    margin: 0.5%;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+
+/* SIDEBAR (fixed width) */
+.sidebar {
+    float: left;
+    width: 250px;  /* FIXED width */
+    background-color:rgb(212, 226, 240);
+    padding: 15px;
+    margin: 10px;
+    min-height: 74vh;
+}
+
+.sidebar h4 {
+    
+    margin: 10px 0;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    font-size: x-large;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* MAIN (fluid) */
+.main {
+    float: left;
+    width: calc(100% - 290px); /* fluid = full width minus sidebar */
+    background-color: whitesmoke;
+    margin: 10px 0;
+    min-height: 60vh;
+    padding: 15px;
+}
+
+.main h1 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+iframe {
+    width: 100%;
+    height: 60vh;
+    border: none;
+}
+
+/* FOOTER */
+.footer {
+    background-color: lightblue;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    width: 100%; /* fluid */
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+1.Design a homepage that display “Online Bookstore” and name of the book store in centre.
+2.Create a 4- column layout to show book categories.
+3.Use Bootstrap heading and styled text for book descriptions.
+4.Apply different background colours to sections like New Arrivals, Best Sellers.
+5.Display a list of books with authors and prices in a styled table
+6.Add responsive book cover images with rounded corners
+7.Use JumBotron to highlight a featured book or sale banner 
+8.Show alert messages like “Added to Cart” or “Login Failed”.
+9.Add buttons like “buy Now” , “Add to Wishlist” , “View Details”.
+10.Create grouped buttons for filtering books by genre.
+11.Use badges to display number of items in cart or reviews count.
+12.show progress bar for reading completion of a book 
+13. Add spinner on checkout page to show payment processing.
+14.Use pagination to navigate through book listing
+15.List genres usin vertical list group menu and sidebar
+16Design book preview cards with image,title,rating,and buttons
+17.Create a dropdown menu to select price range or book format.
+18.Imnplement collapsible book fil;ters for geners,rating and price
+19.Add navigation tabs for Book info,Reviews and author Bio
+20.Design a responsive navbar with logo,link and search bar
+21.Add a carousel to display book promotions or banners.
+22.Ahow book details or author bio inside a model popup
+23.Add Scrollspy to highlight active book category while scrolling
+24.Show tooltip on icons(e.g. Wishlist,Share,Info)
+25.Implement offcanvas menu for mobile sidebar filters
