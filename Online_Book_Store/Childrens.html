@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Children's Books - Book Galaxy</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    img {
+      border: 2px solid grey;
+      box-shadow: cadetblue;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+      font-weight: bold;
+    }
+
+    .nav-link:hover {
+      color: blue !important;
+      background-color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">📖 Book Galaxy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <form class="d-flex" id="searchForm">
+          <input class="form-control me-2" type="search" placeholder="Search books" id="searchInput">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown">
+              Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+              <li><a class="dropdown-item" href="Fiction.html">Fiction</a></li>
+              <li><a class="dropdown-item" href="Non-Fiction.html">Non-Fiction</a></li>
+              <li><a class="dropdown-item" href="horror.html">Horror</a></li>
+              <li><a class="dropdown-item" href="Childrens.html">Children’s</a></li>
+              <li><a class="dropdown-item" href="#romance">Romance</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#new-arrival">New Arrivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#">
+              🛒 Cart
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ Page Content -->
+  <div class="container my-4">
+    <header class="text-center mb-4">
+      <h1>👶 Children’s Books</h1>
+      <p class="lead">Delightful stories and colorful adventures for young readers</p>
+    </header>
+
+    <!-- ✅ Book 1 -->
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <img src="./img/Child/Herr.jpg" alt="Harry Potter" class="rounded-3">
+      </div>
+      <div class="col-md-9">
+        <h3>Harry Potter and the Sorcerer's Stone</h3>
+        <p><b>Author:</b> J.K. Rowling</p>
+        <p>A young wizard’s journey begins at Hogwarts School of Witchcraft and Wizardry filled with magic, friendship,
+          and adventure.</p>
+        <p><b>Price:</b> ₹499/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm">💰 Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Book 2 -->
+    <div class="row mb-4">
+      <div class="col-md-3"><img src="./img/Child/Matilda.jpg" alt="Matilda" class="rounded-3"></div>
+      <div class="col-md-9">
+        <h3>Matilda</h3>
+        <p><b>Author:</b> Roald Dahl</p>
+        <p>A brilliant girl with extraordinary powers stands up to her cruel parents and headmistress.</p>
+        <p><b>Price:</b> ₹350/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm">💰 Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Book 3 -->
+    <div class="row mb-4">
+      <div class="col-md-3"><img src="./img/Child/Charlotte's Web.jpg" alt="Charlotte's Web" class="rounded-3"></div>
+      <div class="col-md-9">
+        <h3>Charlotte’s Web</h3>
+        <p><b>Author:</b> E.B. White</p>
+        <p>A heartwarming story of friendship between a pig named Wilbur and a spider named Charlotte.</p>
+        <p><b>Price:</b> ₹299/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm">💰 Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Book 4 -->
+    <div class="row mb-4">
+      <div class="col-md-3"><img src="./img/Child/The Cat in the Hat.jpg" alt="The Cat in the Hat" class="rounded-3">
+      </div>
+      <div class="col-md-9">
+        <h3>The Cat in the Hat</h3>
+        <p><b>Author:</b> Dr. Seuss</p>
+        <p>A mischievous cat brings fun and chaos into the lives of two children on a rainy day.</p>
+        <p><b>Price:</b> ₹250/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm">💰 Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Book 5 -->
+    <div class="row mb-4">
+      <div class="col-md-3"><img src="./img/Child/The Gruffalo.jpg" alt="The Gruffalo" class="rounded-3"></div>
+      <div class="col-md-9">
+        <h3>The Gruffalo</h3>
+        <p><b>Author:</b> Julia Donaldson</p>
+        <p>A clever mouse outsmarts predators by inventing a scary creature — the Gruffalo!</p>
+        <p><b>Price:</b> ₹280/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm">💰 Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Book 6 -->
+    <div class="row mb-4">
+      <div class="col-md-3"><img src="./img/Child/Winnie the Pooh.jpg" alt="Winnie the Pooh" class="rounded-3"></div>
+      <div class="col-md-9">
+        <h3>Winnie the Pooh</h3>
+        <p><b>Author:</b> A.A. Milne</p>
+        <p>Follow the adventures of Pooh Bear and his friends in the Hundred Acre Wood.</p>
+        <p><b>Price:</b> ₹320/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm">💰 Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-primary text-white mt-5 py-4">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- About -->
+            <div class="col-md-4 mb-3">
+                <h5>📖 Book Galaxy</h5>
+                <p>Your go-to online bookstore for bestsellers, new arrivals, and timeless classics.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#categories" class="text-white text-decoration-none">Categories</a></li>
+                    <li><a href="#new-arrival" class="text-white text-decoration-none">New Arrivals</a></li>
+                    <li><a href="#best-sellers" class="text-white text-decoration-none">Best Sellers</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4 mb-3">
+                <h6>Contact Us</h6>
+                <p><i class="fas fa-envelope"></i> support@bookgalaxy.com</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-map-marker-alt"></i> Anand, India</p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-3">
+            <small>&copy; 2025 Book Galaxy. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

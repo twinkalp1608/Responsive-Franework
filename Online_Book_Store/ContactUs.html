@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Book Galaxy</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* Navbar styling */
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+      font-weight: bold;
+    }
+
+    .nav-link:hover {
+      color: blue !important;
+      background-color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    /* Contact section */
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .contact-section {
+      padding: 60px 0;
+    }
+
+    .contact-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control {
+      border-radius: 8px;
+    }
+
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .btn-custom:hover {
+      background-color: #0056b3;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info h5 {
+      color: #007bff;
+    }
+
+    footer {
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">📖 Book Galaxy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <form class="d-flex" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search books" id="searchInput">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#categories" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                            <li><a class="dropdown-item" href="Fiction.html">Fiction</a></li>
+                            <li><a class="dropdown-item" href="Non-Fiction.html">Non-Fiction</a></li>
+                            <li><a class="dropdown-item" href="horror.html">Horror</a></li>
+                            <li><a class="dropdown-item" href="Childrens.html">Childrens</a></li>
+                            <li><a class="dropdown-item" href="#romance">Romance</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#new-arrival">New Arrivals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="AboutUs.html">AboutUs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ContactUs.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="#">
+                                🛒 Cart
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">
+                                0
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+  <!-- Contact Section -->
+  <div class="container contact-section">
+    <div class="row align-items-center">
+      <!-- Left Image -->
+      <div class="col-md-6 contact-image mb-4 mb-md-0">
+        <img src="img/contact us.jpeg" alt="Contact Us" />
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <div class="contact-form">
+          <h2 class="text-center mb-4">Contact Us</h2>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Type your message..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-custom w-100">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info text-center mt-4">
+          <h5>📞 Call Us:</h5>
+          <p>+91 98765 43210</p>
+
+          <h5>📧 Email:</h5>
+          <p>support@bookgalaxy.com</p>
+
+          <h5>🏢 Address:</h5>
+          <p>123 Galaxy Street, Ahmedabad, Gujarat</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-4">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-3">
+          <h5>📖 Book Galaxy</h5>
+          <p>Your go-to online bookstore for bestsellers, new arrivals, and timeless classics.</p>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="AboutUs.html" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="ContactUs.html" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <h6>Contact Info</h6>
+          <p><i class="fas fa-envelope"></i> support@bookgalaxy.com</p>
+          <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+          <p><i class="fas fa-map-marker-alt"></i> Anand, India</p>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <small>&copy; 2025 Book Galaxy. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

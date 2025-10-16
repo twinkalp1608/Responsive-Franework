@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Non-Fiction Books - Book Galaxy</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    img {
+      border: 2px solid grey;
+      box-shadow: cadetblue;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+      font-weight: bold;
+    }
+
+    .nav-link:hover {
+      color: blue !important;
+      background-color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">📖 Book Galaxy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <form class="d-flex" id="searchForm">
+          <input class="form-control me-2" type="search" placeholder="Search books" id="searchInput" />
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown">
+              Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+              <li><a class="dropdown-item" href="Fiction.html">Fiction</a></li>
+              <li><a class="dropdown-item" href="Non-Fiction.html">Non-Fiction</a></li>
+              <li><a class="dropdown-item" href="horror.html">Horror</a></li>
+              <li><a class="dropdown-item" href="Childrens.html">Children’s</a></li>
+              <li><a class="dropdown-item" href="#romance">Romance</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#new-arrival">New Arrivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact</a></li>
+          <!-- 🛒 Cart -->
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+              🛒 Cart
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ Non-Fiction Section -->
+  <div class="container my-4">
+    <header class="text-center mb-4 bg-dark text-white p-2 rounded">
+      <h1>📚 Non-Fiction Books</h1>
+      <p class="lead">Explore the real world through facts, insights, and stories</p>
+    </header>
+
+    <!-- ✅ Book List -->
+    <div class="row mb-4">
+      <div class="col-md-3"><img src="./img/NonFiction/Sapiens.jpg" alt="Sapiens" class="rounded-3"></div>
+      <div class="col-md-9">
+        <h3 class="book-title">Sapiens: A Brief History of Humankind</h3>
+        <p><b>Author:</b> Yuval Noah Harari</p>
+        <p>A thought-provoking journey through the history of the human species.</p>
+        <p><b>Price:</b> <span class="book-price">450</span>/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm buy-now">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3"><img src="./img/NonFiction/Educated.jpg" alt="Educated" class="rounded-3"></div>
+      <div class="col-md-9">
+        <h3 class="book-title">Educated</h3>
+        <p><b>Author:</b> Tara Westover</p>
+        <p>A memoir of a woman who escapes a survivalist family and pursues education.</p>
+        <p><b>Price:</b> <span class="book-price">399</span>/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm buy-now">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3"><img src="./img/NonFiction/Atomic Habits.jpg" alt="Atomic Habits" class="rounded-3"></div>
+      <div class="col-md-9">
+        <h3 class="book-title">Atomic Habits</h3>
+        <p><b>Author:</b> James Clear</p>
+        <p>A practical guide to building good habits and breaking bad ones.</p>
+        <p><b>Price:</b> <span class="book-price">499</span>/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm buy-now">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3"><img src="./img/NonFiction/The Power of Now.jpg" alt="The Power of Now" class="rounded-3"></div>
+      <div class="col-md-9">
+        <h3 class="book-title">The Power of Now</h3>
+        <p><b>Author:</b> Eckhart Tolle</p>
+        <p>A spiritual guide to living fully in the present moment.</p>
+        <p><b>Price:</b> <span class="book-price">299</span>/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm buy-now">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3"><img src="./img/NonFiction/Think Like a Monk.jpg" alt="Think Like a Monk" class="rounded-3"></div>
+      <div class="col-md-9">
+        <h3 class="book-title">Think Like a Monk</h3>
+        <p><b>Author:</b> Jay Shetty</p>
+        <p>Combines ancient wisdom with practical advice for a meaningful life.</p>
+        <p><b>Price:</b> <span class="book-price">349</span>/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm buy-now">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3"><img src="./img/NonFiction/The Subtle Art of Not Giving .jpg" alt="The Subtle Art of Not Giving" class="rounded-3"></div>
+      <div class="col-md-9">
+        <h3 class="book-title">The Subtle Art of Not Giving</h3>
+        <p><b>Author:</b> Mark Manson</p>
+        <p>A brutally honest self-help book teaching how to prioritize what matters.</p>
+        <p><b>Price:</b> <span class="book-price">399</span>/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm buy-now">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="loginModalLabel">🔐 Login to Continue</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="cartModalLabel">🛒 Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="cart-items">
+          <p class="text-muted">Your cart is empty.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Proceed to Checkout</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Script Section -->
+  <script>
+    // CART LOGIC
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCount = document.getElementById("cart-count");
+    const cartItemsContainer = document.getElementById("cart-items");
+
+    function updateCartCount() {
+      cartCount.textContent = cart.length;
+    }
+
+    function displayCart() {
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p class="text-muted">Your cart is empty.</p>';
+      } else {
+        let html = "<ul class='list-group'>";
+        cart.forEach((item, index) => {
+          html += `
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <div><strong>${item.title}</strong> - ₹${item.price}</div>
+              <button class="btn btn-sm btn-danger" onclick="removeFromCart(${index})">Remove</button>
+            </li>`;
+        });
+        html += "</ul>";
+        cartItemsContainer.innerHTML = html;
+      }
+    }
+
+    document.querySelectorAll(".add-to-cart").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const bookDiv = e.target.closest(".col-md-9");
+        const title = bookDiv.querySelector(".book-title").textContent.trim();
+        const price = bookDiv.querySelector(".book-price").textContent.trim();
+
+        cart.push({ title, price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+        alert(`✅ ${title} added to cart!`);
+      });
+    });
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+      displayCart();
+    }
+
+    updateCartCount();
+    document.getElementById("cartModal").addEventListener("show.bs.modal", displayCart);
+
+    // BUY NOW -> Open Login Modal
+    const loginModal = new bootstrap.Modal(document.getElementById("loginModal"));
+    document.querySelectorAll(".buy-now").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        loginModal.show();
+      });
+    });
+
+    // Handle Login Form Submit
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("✅ Login successful! You can now proceed to buy.");
+      loginModal.hide();
+    });
+  </script>
+  <footer class="bg-primary text-white mt-5 py-4">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- About -->
+            <div class="col-md-4 mb-3">
+                <h5>📖 Book Galaxy</h5>
+                <p>Your go-to online bookstore for bestsellers, new arrivals, and timeless classics.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#categories" class="text-white text-decoration-none">Categories</a></li>
+                    <li><a href="#new-arrival" class="text-white text-decoration-none">New Arrivals</a></li>
+                    <li><a href="#best-sellers" class="text-white text-decoration-none">Best Sellers</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4 mb-3">
+                <h6>Contact Us</h6>
+                <p><i class="fas fa-envelope"></i> support@bookgalaxy.com</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-map-marker-alt"></i> Anand, India</p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-3">
+            <small>&copy; 2025 Book Galaxy. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

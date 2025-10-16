@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fiction Books - Book Galaxy</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+  <style>
+    img { border: 2px solid grey; box-shadow: cadetblue; }
+    .navbar-brand, .nav-link { color: #fff !important; font-weight: bold; }
+    .nav-link:hover { color: blue !important; background-color: white; border-radius: 5px; transition: 0.3s; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">📖 Book Galaxy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <form class="d-flex" id="searchForm">
+          <input class="form-control me-2" type="search" placeholder="Search books" id="searchInput" />
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown">Categories</a>
+            <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+              <li><a class="dropdown-item" href="Fiction.html">Fiction</a></li>
+              <li><a class="dropdown-item" href="Non-Fiction.html">Non-Fiction</a></li>
+              <li><a class="dropdown-item" href="horror.html">Horror</a></li>
+              <li><a class="dropdown-item" href="Childrens.html">Children’s</a></li>
+              <li><a class="dropdown-item" href="#romance">Romance</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#new-arrival">New Arrivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+              🛒 Cart
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Fiction Books Section -->
+  <div class="container my-4">
+    <header class="text-center mb-4">
+      <h1>📚 Fiction Books</h1>
+      <p class="lead">Explore imaginative storytelling and novels</p>
+      <a href="index.html" class="btn btn-secondary btn-sm">← Back to Home</a>
+    </header>
+
+    <!-- Book List Example -->
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <img src="./img/Alchemist.jpg" alt="The Alchemist" class="rounded-3">
+      </div>
+      <div class="col-md-9">
+        <h3 class="book-title">The Alchemist</h3>
+        <p><b>Author:</b> Paulo Coelho</p>
+        <p>A shepherd boy named Santiago dreams of finding a treasure and embarks on a journey of self-discovery and spiritual growth.</p>
+        <p><b>Price:</b> <span class="book-price">399</span>/- </p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm buy-now">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <img src="./img/FictionBook/1984 by George Orwell.jpg" alt="1984" class="rounded-3">
+      </div>
+      <div class="col-md-9">
+        <h3 class="book-title">1984 by George Orwell</h3>
+        <p><b>Author:</b> George Orwell</p>
+        <p>This dystopian novel explores a totalitarian state where surveillance is constant and individuality suppressed. It delves into themes of control, propaganda, and rebellion.</p>
+        <p><b>Price:</b> <span class="book-price">299</span>/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <img src="./img/FictionBook/HarryPoter.jpg" alt="Harry Potter" class="rounded-3">
+      </div>
+      <div class="col-md-9">
+        <h3 class="book-title">Harry Potter and the Philosopher’s Stone</h3>
+        <p><b>Author:</b> J.K. Rowling</p>
+        <p>Harry discovers he is a wizard and begins his magical education at Hogwarts. A story of friendship, bravery, and magic.</p>
+        <p><b>Price:</b> <span class="book-price">350</span>/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <img src="./img/FictionBook/To Kill a Mockingbird.jpg" alt="To Kill a Mockingbird" class="rounded-3">
+      </div>
+      <div class="col-md-9">
+        <h3 class="book-title">To Kill a Mockingbird</h3>
+        <p><b>Author:</b> Harper Lee</p>
+        <p>A powerful story about racial injustice and childhood innocence in the Deep South.</p>
+        <p><b>Price:</b> <span class="book-price">350</span>/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <img src="./img/FictionBook/Pride and Prejudice.jpg" alt="Pride and Prejudice" class="rounded-3">
+      </div>
+      <div class="col-md-9">
+        <h3 class="book-title">Pride and Prejudice</h3>
+        <p><b>Author:</b> Jane Austen</p>
+        <p>A classic romantic tale of Elizabeth Bennet and Mr. Darcy, exploring themes of class, love, and pride.</p>
+        <p><b>Price:</b> <span class="book-price">275</span>/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <img src="./img/FictionBook/The Great Gatsby.jpg" alt="The Great Gatsby" class="rounded-3">
+      </div>
+      <div class="col-md-9">
+        <h3 class="book-title">The Great Gatsby</h3>
+        <p><b>Author:</b> F. Scott Fitzgerald</p>
+        <p>A tragic love story set in the Jazz Age, exploring wealth, dreams, and disillusionment.</p>
+        <p><b>Price:</b> <span class="book-price">320</span>/-</p>
+        <div class="mt-2">
+          <button class="btn btn-success btn-sm">💰Buy Now</button>
+          <button class="btn btn-outline-primary btn-sm">💖 Add to Wishlist</button>
+          <button class="btn btn-info btn-sm text-white add-to-cart">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- Add more books in similar structure -->
+
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="cartModalLabel">🛒 Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="cart-items">
+          <p class="text-muted">Your cart is empty.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="proceedCheckoutBtn">Proceed to Checkout</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="loginModalLabel">🔐 Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="checkoutModalLabel">💳 Checkout</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Follow the steps to complete your purchase:</p>
+          <div class="progress mb-3">
+            <div id="checkoutProgress" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 33%">Step 1 of 3</div>
+          </div>
+          <div id="checkoutSteps">
+            <div id="step1">
+              <h6>Cart Review</h6>
+              <ul class="list-group" id="checkoutCartList"></ul>
+              <button class="btn btn-primary mt-3" id="nextStepBtn">Next</button>
+            </div>
+            <div id="step2" style="display:none;">
+              <h6>Payment Details</h6>
+              <input type="text" class="form-control mb-2" placeholder="Card Number" required>
+              <input type="text" class="form-control mb-2" placeholder="Expiry Date" required>
+              <input type="text" class="form-control mb-2" placeholder="CVV" required>
+              <button class="btn btn-primary mt-2" id="nextStepBtn2">Next</button>
+            </div>
+            <div id="step3" style="display:none;">
+              <h6>Confirmation</h6>
+              <p>✅ Your order has been placed successfully!</p>
+              <button class="btn btn-success mt-2" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCount = document.getElementById("cart-count");
+    const cartItemsContainer = document.getElementById("cart-items");
+
+    function updateCartCount() {
+      cartCount.textContent = cart.length;
+    }
+
+    function displayCart() {
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p class="text-muted">Your cart is empty.</p>';
+      } else {
+        let html = "<ul class='list-group'>";
+        cart.forEach((item, index) => {
+          html += `<li class="list-group-item d-flex justify-content-between align-items-center">
+            <div><strong>${item.title}</strong> - ₹${item.price}</div>
+            <button class="btn btn-sm btn-danger" onclick="removeFromCart(${index})">Remove</button>
+          </li>`;
+        });
+        html += "</ul>";
+        cartItemsContainer.innerHTML = html;
+      }
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+      displayCart();
+    }
+
+    updateCartCount();
+    const cartModal = document.getElementById("cartModal");
+    cartModal.addEventListener("show.bs.modal", displayCart);
+
+    // Add to Cart buttons
+    document.querySelectorAll(".add-to-cart").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const bookDiv = e.target.closest(".col-md-9");
+        const title = bookDiv.querySelector(".book-title").textContent.trim();
+        const price = bookDiv.querySelector(".book-price").textContent.trim();
+        cart.push({ title, price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+        alert(`✅ ${title} added to cart!`);
+      });
+    });
+
+    // Buy Now buttons (add to cart + login)
+    document.querySelectorAll(".buy-now").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const bookDiv = e.target.closest(".col-md-9");
+        const title = bookDiv.querySelector(".book-title").textContent.trim();
+        const price = bookDiv.querySelector(".book-price").textContent.trim();
+        cart.push({ title, price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+
+        const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+        loginModal.show();
+      });
+    });
+
+    // Login Form
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+      loginModal.hide();
+
+      // Fill checkout cart list
+      const checkoutCartList = document.getElementById("checkoutCartList");
+      checkoutCartList.innerHTML = "";
+      cart.forEach(item => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.textContent = `${item.title} - ₹${item.price}`;
+        checkoutCartList.appendChild(li);
+      });
+
+      // Show Checkout Modal
+      const checkoutModal = new bootstrap.Modal(document.getElementById('checkoutModal'));
+      checkoutModal.show();
+    });
+
+    // Checkout Steps
+    const step1 = document.getElementById("step1");
+    const step2 = document.getElementById("step2");
+    const step3 = document.getElementById("step3");
+    const progressBar = document.getElementById("checkoutProgress");
+
+    document.getElementById("nextStepBtn").addEventListener("click", function() {
+      step1.style.display = "none";
+      step2.style.display = "block";
+      progressBar.style.width = "66%";
+      progressBar.textContent = "Step 2 of 3";
+    });
+
+    document.getElementById("nextStepBtn2").addEventListener("click", function() {
+      step2.style.display = "none";
+      step3.style.display = "block";
+      progressBar.style.width = "100%";
+      progressBar.textContent = "Step 3 of 3";
+    });
+  </script>
+</body>
+</html>

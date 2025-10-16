@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <script src="./bootstrap/js/bootstrap.js"></script>
+        <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .category-box{
+            height: 200px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand,
+        .nav-link {
+        color: #fff !important;
+        font-weight: bold;
+        }
+
+        .nav-link:hover {
+        color: blue !important;
+        background-color:white;
+        border-radius: 5px;
+        transition: 0.3s;
+        }
+
+    </style>
+   
+
+
+</head>
+<body>
+     <!-- Navigation Bar -->
+    <div class="container-fluid border" >
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">📖 Book Galaxy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <form class="d-flex" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search books" id="searchInput">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#categories" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                            <li><a class="dropdown-item" href="Fiction.html">Fiction</a></li>
+                            <li><a class="dropdown-item" href="Non-Fiction.html">Non-Fiction</a></li>
+                            <li><a class="dropdown-item" href="horror.html">Horror</a></li>
+                            <li><a class="dropdown-item" href="Childrens.html">Childrens</a></li>
+                            <li><a class="dropdown-item" href="#romance">Romance</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#new-arrival">New Arrivals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="AboutUs.html">AboutUs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ContactUs.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="#">
+                                🛒 Cart
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">
+                                0
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+        <br>
+        <header class="text-center py-4 bg-dark text-white">
+            <h1 class="display-4">📚 Online Bookstore</h1>
+            <h3 class="fw-light">Book Galaxy</h3>
+        </header>
+        <br>
+        <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/bg2.png" class="d-block w-100 " style="height: 600px;" alt="Banner 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Big Sale on Best Sellers</h5>
+          <p>Get up to 50% off on popular titles.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/bg3.png" class="d-block w-100 " style="height: 600px;"  alt="Banner 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>New Arrivals</h5>
+          <p>Check out the latest releases in our collection.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/bg4.png" class="d-block w-100 " style="height: 600px;" alt="Banner 3">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Featured Books</h5>
+          <p>Handpicked books recommended by our experts.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+        <div class="p-5 mb-4  text-dark rounded-3" style="background-color:lightyellow;">
+            <div class="container-fluid py-3 text-center">
+                <h1 class="display-5 fw-bold">🔥 Featured: “Atomic Habits” - 30% OFF</h1>
+                <p class="lead">Master the art of habits and change your life!</p>
+                <button class="btn btn-danger btn-lg">Shop Now</button>
+            </div>
+        </div>
+        <br>
+        <!-- book types -->
+        <div class="container text-center mb-4">
+            <div class="btn-group" role="group" aria-label="Genre Filter">
+                <a href="./Fiction.html" class="btn btn-outline-primary">Fiction</a>
+                <a href="./Non-Fiction.html" class="btn btn-outline-secondary">Non-Fiction</a>
+                <a href="./horror.html" class="btn btn-outline-success">Horror</a>
+                <a href="./Childrens.html" class="btn btn-outline-info">Kids</a>
+            </div>
+        </div>
+
+        <!-- Book Categories -->
+        <div class="container mb-5">
+            <h2 class="text-center">Explore Book Categories</h2>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="category-box">
+                        <h5 class="fw-bold">Fiction</h5>
+                        <p class="text-mute">Imaginative storytelling, including novels and short stories. 
+                            Dive into worlds crafted by authors for entertainment or reflection.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-box">
+                        <h5 class="fw-bold">Non-Fiction</h5>
+                        <p class="text-mute">Explore the real world through facts, insights, and stories that inspire learning and growth.
+                Popular Topics: Memoirs, Business, Psychology, True Crime, Travel.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-box">
+                        <h5 class="fw-bold">Horrer</h5>
+                        <p class="text-mute">Horror books aim to evoke fear, dread, and revulsion in the reader, often through supernatural elements or psychological scenarios. </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-box">
+                        <h5 class="fw-bold">Children’s Books</h5>
+                        <p class="text-mute">Fun, colorful, and educational books for young readers.
+                Includes: Picture books, storybooks, activity books, early learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section style="background-color: #e3f2fd;">
+            <div class="cotainer">
+                <h2 class="text-center md-4">New Arrival</h2>
+                <div class="row">
+                    <!-- book1 -->
+                    <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <img src="./img/fourthwing.jpg" class="card-img-top" alt="Fourth Wing">
+                            <div class="card-body">
+                                <h5 class="card-title">Fourth Wing</h5>
+                                <p class="card-text">by Rebecca Yarros</p>
+                                <p class="text-success fw-bold">$14.99</p>
+                                <button class="btn btn-success btn-sm">💰 Buy Now</button>
+                                <button class="btn btn-info btn-sm">❤ Add to Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- book2 -->
+                        <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <img src="./img/Alchemist.jpg" class="card-img" alt="The Alchemist" width="20">
+                            <div class="card-body">
+                                <h5 class="card-title">The Alchemist</h5>
+                                <p class="card-text">by Paulo Coelho</p>
+                                <p class="text-success fw-bold">400/-</p>
+                                <button class="btn btn-success btn-sm">💰 Buy Now</button>
+                                <button class="btn btn-info btn-sm">❤ Add to Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="./img/atomisHabits.jpg" class="card-img-top" alt="Atomic Habits">
+                            <div class="card-body">
+                                <h5 class="card-title">Atomic Habits</h5>
+                                <p class="card-text">by James Clear</p>
+                                <p class="text-success fw-bold">$16.99</p>
+                                <button class="btn btn-success btn-sm ">💰 Buy Now</button>
+                                <button class="btn btn-info btn-sm">❤ Add to Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="./img/it_ends_with_us.jpg" class="" alt="It Ends With Us" >
+                            <div class="card-body">
+                                <h5 class="card-title">It Ends With Us</h5>
+                                <p class="card-text">by Colleen Hoover</p>
+                                <p class="text-success fw-bold">$16.99</p>
+                                <button class="btn btn-success btn-sm">💰 Buy Now</button>
+                                <button class="btn btn-info btn-sm">❤ Add to Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: #e8f5e9;">
+            <div class="container py-4">
+                <h2 class="text-center mb-4">Best Sellers</h2>
+
+                <!-- Fiction Best Sellers -->
+                <h4 class="text-primary">📘 Fiction</h4>
+                <table class="table table-bordered table-hover">
+                    <thead class="table-info">
+                        <tr>
+                            <th>Title</th><th>Author</th><th>Price</th><th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>It Ends With Us</td>
+                            <td>Colleen Hoover</td>
+                            <td>₹349</td>
+                            <td><button class="btn btn-success btn-sm">💰 Buy Now</button></td>
+                        </tr>
+                        <tr>
+                            <td>The Midnight Library</td>
+                            <td>Matt Haig</td>
+                            <td>₹420</td>
+                            <td><button class="btn btn-success btn-sm">💰 Buy Now</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Non-Fiction Best Sellers -->
+                <h4 class="text-success mt-4">📗 Non-Fiction</h4>
+                <table class="table table-bordered table-hover">
+                    <thead class="table-info">
+                        <tr>
+                            <th>Title</th><th>Author</th><th>Price</th><th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sapiens</td>
+                            <td>Yuval Noah Harari</td>
+                            <td>₹499</td>
+                            <td><button class="btn btn-success btn-sm">💰 Buy Now</button></td>
+                        </tr>
+                        <tr>
+                            <td>Educated</td>
+                            <td>Tara Westover</td>
+                            <td>₹380</td>
+                            <td><button class="btn btn-success btn-sm">💰 Buy Now</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Self-Help Best Sellers -->
+                <h4 class="text-warning mt-4">📙 Self-Help</h4>
+                <table class="table table-bordered table-hover">
+                    <thead class="table-info">
+                        <tr>
+                            <th>Title</th><th>Author</th><th>Price</th><th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Atomic Habits</td>
+                            <td>James Clear</td>
+                            <td>₹450</td>
+                            <td><button class="btn btn-success btn-sm">💰 Buy Now</button></td>
+                        </tr>
+                        <tr>
+                            <td>Rich Dad Poor Dad</td>
+                            <td>Robert Kiyosaki</td>
+                            <td>₹399</td>
+                            <td><button class="btn btn-success btn-sm">💰 Buy Now</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section> 
+    </div>
+
+    <!-- Footer -->
+<footer class="bg-primary text-white mt-5 py-4">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- About -->
+            <div class="col-md-4 mb-3">
+                <h5>📖 Book Galaxy</h5>
+                <p>Your go-to online bookstore for bestsellers, new arrivals, and timeless classics.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#categories" class="text-white text-decoration-none">Categories</a></li>
+                    <li><a href="#new-arrival" class="text-white text-decoration-none">New Arrivals</a></li>
+                    <li><a href="#best-sellers" class="text-white text-decoration-none">Best Sellers</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4 mb-3">
+                <h6>Contact Us</h6>
+                <p><i class="fas fa-envelope"></i> support@bookgalaxy.com</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-map-marker-alt"></i> Anand, India</p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-3">
+            <small>&copy; 2025 Book Galaxy. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
